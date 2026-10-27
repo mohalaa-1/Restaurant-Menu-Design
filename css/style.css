@@ -1,0 +1,407 @@
+/* ===================================================
+   تنسيقات عامة للموقع (General Styles)
+   =================================================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f8f9fa;
+    color: #333333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* ===================================================
+   شريط التنقل (Navbar)
+   =================================================== */
+.logo {
+    width: 40px;
+    height: 30px;
+    border-radius: 4px;
+    margin-right: 8px;
+}
+
+/* ===================================================
+   القسم الرئيسي في الصفحة الرئيسية (Hero Section)
+   =================================================== */
+.hero {
+    width: 100%;
+    height: 100vh;
+    /* شاشة سوداء مع تقليل الأوباسيتي لإبراز النصوص */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url("../imges/background.avif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.hero .caption h1 {
+    color: #ffffff;
+    font-size: 46px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    text-shadow: 0 3px 12px rgba(0, 0, 0, 0.8);
+}
+
+.hero .caption p {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 500;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+/* ===================================================
+   صفحة المنيو (Menu Page)
+   =================================================== */
+.home2 {
+    width: 100%;
+    flex: 1;
+    padding: 40px 20px;
+}
+
+.home2 h2 {
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+    color: #2b2d42;
+    margin-top: 15px;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.food,
+.drinks {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 45px;
+}
+
+/* تنسيق الكروت (Cards) */
+.card {
+    background-color: #ffffff;
+    border: 1px solid #e9ecef;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 0;
+    margin-bottom: 15px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.card-img-top {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.card .card-text {
+    font-size: 18px;
+    font-weight: 600;
+    color: #2b2d42;
+    margin: 15px 0 12px;
+}
+
+/* زر الطلب (Order Button) */
+.card .btn {
+    background-color: #e67e22;
+    border-color: #e67e22;
+    color: #ffffff;
+    font-weight: 500;
+    border-radius: 6px;
+    padding: 7px 20px;
+    margin-bottom: 15px;
+    transition: background-color 0.2s ease;
+}
+
+.card .btn:hover {
+    background-color: #d35400;
+    border-color: #d35400;
+    color: #ffffff;
+}
+
+/* روابط المزيد (More Links) */
+.home2 a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    color: #2b2d42;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 10px;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.home2 a:hover {
+    color: #e67e22;
+    transform: translateX(4px);
+}
+
+/* ===================================================
+   صفحة تواصل معنا (Contact Page)
+   =================================================== */
+.contact-section {
+    flex: 1;
+    padding: 50px 20px;
+}
+
+.contact-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.contact-header h1 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #2b2d42;
+    margin-bottom: 10px;
+}
+
+.contact-header p {
+    color: #6c757d;
+    font-size: 16px;
+}
+
+/* بطاقات معلومات الاتصال */
+.contact-info-card {
+    background-color: #ffffff;
+    border: 1px solid #e9ecef;
+    border-radius: 12px;
+    padding: 25px 20px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    margin-bottom: 25px;
+    transition: transform 0.3s ease;
+}
+
+.contact-info-card:hover {
+    transform: translateY(-5px);
+}
+
+.contact-icon {
+    width: 55px;
+    height: 55px;
+    background-color: #fef3e6;
+    color: #e67e22;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.contact-info-card h4 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #2b2d42;
+    margin-bottom: 8px;
+}
+
+.contact-info-card p {
+    color: #6c757d;
+    font-size: 14px;
+    margin: 0;
+}
+
+/* نموذج المراسلة */
+.contact-form-card {
+    background-color: #ffffff;
+    border: 1px solid #e9ecef;
+    border-radius: 12px;
+    padding: 35px 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.contact-form-card h3 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #2b2d42;
+    margin-bottom: 20px;
+}
+
+.contact-form-card .form-control {
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    padding: 10px 14px;
+    font-size: 14px;
+    margin-bottom: 18px;
+}
+
+.contact-form-card .form-control:focus {
+    border-color: #e67e22;
+    box-shadow: 0 0 0 0.2rem rgba(230, 126, 34, 0.15);
+}
+
+.btn-send {
+    background-color: #e67e22;
+    border: none;
+    color: #ffffff;
+    padding: 12px 32px;
+    font-weight: 600;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.btn-send:hover {
+    background-color: #d35400;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+/* ===================================================
+   الفوتر (Footer Styles)
+   =================================================== */
+.footer {
+    width: 100% !important;
+    background-color: #212529;
+    color: #ffffff;
+    padding: 35px 0 20px;
+    margin-top: auto;
+}
+
+.footer h5 {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.footer p {
+    color: #adb5bd;
+    font-size: 14px;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.footer-links a {
+    color: #adb5bd;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+    color: #e67e22;
+}
+
+.footer-social a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background-color: #2c3238;
+    color: #ffffff;
+    border-radius: 50%;
+    margin: 0 5px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.footer-social a:hover {
+    background-color: #e67e22;
+    color: #ffffff;
+    transform: translateY(-3px);
+}
+
+.footer hr {
+    border-color: #343a40;
+    margin: 20px 0;
+    opacity: 0.3;
+}
+
+/* ===================================================
+   التجاوب مع الشاشات (Responsive)
+   =================================================== */
+@media (max-width: 991px) {
+    .food,
+    .drinks {
+        gap: 16px;
+    }
+
+    .card {
+        width: calc(50% - 12px) !important;
+        max-width: 100% !important;
+    }
+
+    .card-img-top {
+        height: 160px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero {
+        height: 70vh;
+        min-height: 400px;
+    }
+
+    .hero .caption h1 {
+        font-size: 30px;
+    }
+
+    .hero .caption p {
+        font-size: 15px;
+    }
+
+    .home2 h2 {
+        font-size: 22px;
+    }
+
+    /* كاردين في كل صف على الفون */
+    .card {
+        width: calc(50% - 8px) !important;
+        max-width: 100% !important;
+        margin-bottom: 12px;
+    }
+
+    .card-img-top {
+        height: 130px;
+    }
+
+    .card .card-text {
+        font-size: 14px;
+        margin: 10px 0 6px;
+    }
+
+    .card .btn {
+        font-size: 11px;
+        padding: 5px 12px;
+    }
+
+    .contact-form-card {
+        padding: 25px 18px;
+    }
+}
